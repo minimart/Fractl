@@ -1,7 +1,7 @@
 angular.module('fractlIndex').config(function($routeProvider, $locationProvider){
   $routeProvider
     .when('/home', {
-      templateUrl:'views/home.html',
+      templateUrl:'views/homepage.html',
       controller: 'homeController'
     })
     .when('/newEntry', {

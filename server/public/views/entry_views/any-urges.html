@@ -1,0 +1,29 @@
+<div layout="row" class="layout-padding-lg">
+<div flex>
+
+
+  <md-radio-group ng-model="data.group1">
+        <md-radio-button value="Yes" class="md-primary">Yes</md-radio-button>
+        <md-radio-button value="No">No</md-radio-button>
+
+    </md-radio-group>
+    <div flex>
+    <md-checkbox ng-click="showSuicideToast">Suicide</md-checkbox>
+    <md-checkbox>Self-Harm</md-checkbox>
+    <md-checkbox>Drug/Alcohol Use</md-checkbox>
+    </div>
+</div>
+<div flex>
+
+<div flex="66">
+
+
+<a href="/newEntry/emotions"><md-button class="md-raised md-primary md-hue-3"> Next </md-button></a>
+</div>
+<div flex="33">
+
+
+<a href="/newEntry"><md-button class="md-raised md-primary md-hue-3">Back</md-button></a>
+</div>
+</div>
+</div>
