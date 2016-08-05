@@ -1,1 +1,39 @@
-<img src="../assets/fractl-logo.png" />
+<div flex>
+  <h2> How were your emotion levels today?</h2>
+  <h3> First, select an emotion. Then select how intense that emotion was, from 0 to 10 where 10 is the most intense.</h3>
+  <div layout="row" ng-repeat="item in itemList |limitTo:6">
+    <md-input-container flex="33">
+      <label>Emotion</label>
+      <md-select ng-model="item.emotionObject.emotion">
+        <md-option ng-repeat="emotion in emotionList track by $index" ng-value="emotion">{{emotion}}</md-option>
+      </md-select>
+
+    </md-input>
+    <md-input-container flex="33">
+      <label> Intensity</label>
+      <md-select ng-model="item.emotionObject.intensity">
+        <md-option ng-repeat="intensity in intensityList track by $index" ng-value="intensity">{{intensity}}</md-option>
+      </md-select>
+      <md-button class="md-raised md-primary md-hue-4" ng-click="emotionSubmit()">Submit Emotion</md-button>
+    </md-input-container>
+
+  </div>
+
+  <div flex>
+
+      <div flex="66">
+
+
+          <a href="/newEntry/drugs">
+              <md-button class="md-raised md-primary md-hue-3"> Next </md-button>
+          </a>
+      </div>
+      <div flex="33">
+
+
+          <a href="/newEntry/any-urges">
+              <md-button class="md-raised md-primary md-hue-3">Back</md-button>
+          </a>
+      </div>
+  </div>
+</div>

@@ -1,11 +1,14 @@
 angular.module('fractlIndex').controller('anyUrgesController', function($scope, $mdToast){
   $scope.showSuicideToast = function() {
-      // var pinTo = $scope.getToastPosition();
+      // console.log('Clicked!');
       $mdToast.show(
         $mdToast.simple()
           .textContent('Please look at the Emergency Page!')
-          .position('top right')
-          .hideDelay(3000)
+          .position('bottom left right')
+          .hideDelay(7000)
       );
+
     };
+
+      $scope.yesUrges = false;
 });

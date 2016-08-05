@@ -1,0 +1,27 @@
+<div flex="50" layout="column" layout-wrap>
+  <h3>What prescription or over-the-counter medications did you take today?</h3>
+  <div flex ng-repeat="input in drugList">
+
+    <md-input-container class="md-block">
+           <label>Drug Name</label>
+           <input ng-model="input.drugList.drugName" />
+         </md-input-container>
+  <md-input-container class="md-block">
+      <label>Amount</label>
+      <input ng-model="input.drugList.drugAmount" />
+  </md-input-container>
+  <md-button class="md-raised md-primary md-hue-4" ng-click="drugSubmit()">Submit Drug</md-button>
+</div>
+</div>
+<div flex>
+    <div flex="66">
+        <a href="/newEntry/dbt-skills">
+            <md-button class="md-raised md-primary md-hue-3"> Next </md-button>
+        </a>
+    </div>
+    <div flex="33">
+        <a href="/newEntry/emotions">
+            <md-button class="md-raised md-primary md-hue-3">Back</md-button>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div layout="row" layout-wrap>
+  <h3> Did you use any DBT Skills today?</h3>
+  <md-radio-group ng-model="input.dbtSkills.trueFalse">
+      <md-radio-button value="Yes" class="md-primary" ng-click="yesSkills = !yesSkills">Yes</md-radio-button>
+      <md-radio-button value="No">No</md-radio-button>
+  </md-radio-group>
+  <div ng-show="yesSkills">
+    <h3> Great! Which skill(s) did you use? </h3>
+    <
+  </div>
+
+</div>
+
+
+
+<div flex>
+    <div flex="66">
+        <a href="/newEntry/journaling">
+            <md-button class="md-raised md-primary md-hue-3"> Next </md-button>
+        </a>
+    </div>
+    <div flex="33">
+        <a href="/newEntry/drugs">
+            <md-button class="md-raised md-primary md-hue-3">Back</md-button>
+        </a>
+    </div>
+</div>
