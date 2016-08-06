@@ -2,16 +2,16 @@
     <div flex>
 
       <h3> Did you have any urges to self-harm, commit suicide, or use drugs or alcohol?</h3>
-        <md-radio-group ng-model="data.group1">
+        <md-radio-group ng-model="entryObject.urges">
             <md-radio-button value="Yes" class="md-primary" ng-click="yesUrges = !yesUrges">Yes</md-radio-button>
             <md-radio-button value="No">No</md-radio-button>
         </md-radio-group>
         <span ng-show="yesUrges">
           <h3> You answered yes, which did you have urges to do?</h3>
             <div flex>
-              <md-checkbox ng-click="showSuicideToast()" ng-model="showToastValue">Suicide</md-checkbox>
-              <md-checkbox>Self-Harm</md-checkbox>
-              <md-checkbox>Drug/Alcohol Use</md-checkbox>
+              <md-checkbox ng-click="showSuicideToast()" ng-model="entryObject.whatUrges1" value="Suicide">Suicide</md-checkbox>
+              <md-checkbox ng-model="entryObject.whatUrges2" value="Self-Harm">Self-Harm</md-checkbox>
+              <md-checkbox ng-model="entryObject.whatUrges3" value="Drug/Alcohol Use">Drug/Alcohol Use</md-checkbox>
             </div>
           </span>
     </div>
@@ -21,7 +21,7 @@
 
 
             <a href="/newEntry/emotions">
-                <md-button class="md-raised md-primary md-hue-3"> Next </md-button>
+                <md-button class="md-raised md-primary md-hue-3" ng-click="submitItem()"> Next </md-button>
             </a>
         </div>
         <div flex="33">

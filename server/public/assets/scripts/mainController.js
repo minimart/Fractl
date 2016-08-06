@@ -1,4 +1,4 @@
-  angular.module('fractlIndex', ['ngMaterial', 'ngRoute']);
+  angular.module('fractlIndex', ['ngMaterial', 'ngRoute', 'angularMoment']);
 
 // Theming for Angular Material
   angular.module('fractlIndex').config(function ($mdThemingProvider) {

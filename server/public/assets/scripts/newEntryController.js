@@ -1,3 +1,4 @@
-angular.module('fractlIndex').controller('newEntryController', function($scope){
-$scope.date = "August 2nd, 2016";
+angular.module('fractlIndex').controller('newEntryController', function($scope, submitService, moment){
+  $scope.entryObject = submitService.entryObject;
+$scope.date = new Date();
 });
