@@ -7,7 +7,7 @@ angular.module('fractlIndex').controller('anyUrgesController', function($scope, 
 $scope.entryObject.whatUrges = firstUrge + ", " + secondUrge+ ", " + thirdUrge;
   // $scope.submitItem = submitService.submitItem(whatUrges);
 
-
+//GOD WHY DOESNT THIS WORK
 
   $scope.showSuicideToast = function() {
       // console.log('Clicked!');
