@@ -1,13 +1,10 @@
 angular.module('fractlIndex').controller('anyUrgesController', function($scope, $mdToast, submitService){
   $scope.entryObject = submitService.entryObject;
-  var firstUrge = $scope.whatUrges1;
-  var secondUrge = $scope.whatUrges2;
-  var thirdUrge = $scope.whatUrges3;
+  // var firstUrge = $scope.whatUrges1;
+  // var secondUrge = $scope.whatUrges2;
+  // var thirdUrge = $scope.whatUrges3;
 
-$scope.entryObject.whatUrges = firstUrge + ", " + secondUrge+ ", " + thirdUrge;
   // $scope.submitItem = submitService.submitItem(whatUrges);
-
-//GOD WHY DOESNT THIS WORK
 
   $scope.showSuicideToast = function() {
       // console.log('Clicked!');
@@ -19,15 +16,14 @@ $scope.entryObject.whatUrges = firstUrge + ", " + secondUrge+ ", " + thirdUrge;
       );
     };
 
-
-$scope.submitItem = function(urges, whatUrges){
+$scope.submitStuff = function(urges, whatUrges){
+  var whatUrges = {whatUrges1: $scope.entryObject.whatUrges.whatUrges1, whatUrges2: $scope.entryObject.whatUrges.whatUrges2, whatUrges3: $scope.entryObject.whatUrges.whatUrges3};
+  var urges = $scope.entryObject.urges;
   submitService.submitItem(urges);
   submitService.submitItem(whatUrges);
   console.log(urges);
   console.log(whatUrges);
-  console.log(firstUrge);
-  console.log(secondUrge);
-  console.log(thirdUrge);
+
 };
       $scope.yesUrges = false;
 

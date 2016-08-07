@@ -10,7 +10,7 @@
       <label>Skills</label>
       <md-select ng-model="entryObject.dbtSkills" multiple>
       <md-optgroup label="dbtSkills">
-      <md-option  ng-repeat="skill in dbtSkillsList">{{skill}}</md-option>
+      <md-option  ng-repeat="skill in dbtSkillsList" ng-true-value="'{{skill}}'" ng-false-value="'0'">{{skill}}</md-option>
       </md-optgroup>
       </md-select>
     </md-input-group>

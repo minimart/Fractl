@@ -9,9 +9,9 @@
         <span ng-show="yesUrges">
           <h3> You answered yes, which did you have urges to do?</h3>
             <div flex>
-              <md-checkbox ng-click="showSuicideToast()" ng-model="entryObject.whatUrges1" value="Suicide">Suicide</md-checkbox>
-              <md-checkbox ng-model="entryObject.whatUrges2" value="Self-Harm">Self-Harm</md-checkbox>
-              <md-checkbox ng-model="entryObject.whatUrges3" value="Drug/Alcohol Use">Drug/Alcohol Use</md-checkbox>
+              <md-checkbox ng-click="showSuicideToast()" ng-model="entryObject.whatUrges.whatUrges1" ng-true-value="'Suicide'" ng-false-value="'0'">Suicide</md-checkbox>
+              <md-checkbox ng-model="entryObject.whatUrges.whatUrges2" ng-true-value="'Self-Harm'" ng-false-value="'0'">Self-Harm</md-checkbox>
+              <md-checkbox ng-model="entryObject.whatUrges.whatUrges3" ng-true-value="'Substance-Use'" ng-false-value="'0'">Drug/Alcohol Use</md-checkbox>
             </div>
           </span>
     </div>
@@ -21,7 +21,7 @@
 
 
             <a href="/newEntry/emotions">
-                <md-button class="md-raised md-primary md-hue-3" ng-click="submitItem()"> Next </md-button>
+                <md-button class="md-raised md-primary md-hue-3" ng-click="submitStuff()"> Next </md-button>
             </a>
         </div>
         <div flex="33">

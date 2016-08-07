@@ -3,80 +3,80 @@
 // Theming for Angular Material
   angular.module('fractlIndex').config(function ($mdThemingProvider) {
     var customPrimary = {
-        '50': '#575e86',
-        '100': '#4d5377',
-        '200': '#434967',
-        '300': '#393e58',
-        '400': '#2f3348',
-        '500': '#252839',
-        '600': '#1b1d2a',
-        '700': '#11121a',
-        '800': '#07070b',
-        '900': '#000000',
-        'A100': '#616996',
-        'A200': '#6f77a2',
-        'A400': '#7e85ac',
-        'A700': '#000000'
-    };
+       '50': '#988bc2',
+       '100': '#897bb9',
+       '200': '#7a6ab1',
+       '300': '#6c59a8',
+       '400': '#615098',
+       '500': '564787',
+       '600': '#4b3e76',
+       '700': '#413566',
+       '800': '#362d55',
+       '900': '#2b2444',
+       'A100': '#a79ccb',
+       'A200': '#b6add4',
+       'A400': '#c5bddd',
+       'A700': '#211b33'
+   };
     $mdThemingProvider
         .definePalette('customPrimary',
                         customPrimary);
 
     var customAccent = {
-        '50': '#835c08',
-        '100': '#9b6d0a',
-        '200': '#b37e0b',
-        '300': '#cb8f0d',
-        '400': '#e3a00e',
-        '500': '#f0ad1a',
-        '600': '#f4bf4a',
-        '700': '#f5c762',
-        '800': '#f7d07a',
-        '900': '#f8d892',
-        'A100': '#f4bf4a',
-        'A200': '#f2b632',
-        'A400': '#f0ad1a',
-        'A700': '#fae1aa'
+        '50': '#72460a',
+        '100': '#89550c',
+        '200': '#a1630e',
+        '300': '#b87210',
+        '400': '#d08012',
+        '500': '#e78e15',
+        '600': '#eea540',
+        '700': '#f0b058',
+        '800': '#f2bb6f',
+        '900': '#f4c687',
+        'A100': '#eea540',
+        'A200': '#EC9A29',
+        'A400': '#e78e15',
+        'A700': '#f6d19e'
     };
     $mdThemingProvider
         .definePalette('customAccent',
                         customAccent);
 
     var customWarn = {
-        '50': '#a9afb5',
-        '100': '#9ba3a9',
-        '200': '#8e969d',
-        '300': '#808a91',
-        '400': '#737d85',
-        '500': '#677077',
-        '600': '#5b6369',
-        '700': '#4f565c',
-        '800': '#43494e',
-        '900': '#383d40',
-        'A100': '#b7bcc0',
-        'A200': '#c4c9cc',
-        'A400': '#d2d5d8',
-        'A700': '#2c3033'
+        '50': '#e6625c',
+        '100': '#e24c46',
+        '200': '#df3730',
+        '300': '#d42821',
+        '400': '#be241d',
+        '500': '#A8201A',
+        '600': '#921c17',
+        '700': '#7c1813',
+        '800': '#661310',
+        '900': '#500f0c',
+        'A100': '#e97772',
+        'A200': '#ed8c88',
+        'A400': '#f0a19e',
+        'A700': '#3a0b09'
     };
     $mdThemingProvider
         .definePalette('customWarn',
                         customWarn);
 
     var customBackground = {
-        '50': '#f6f6f6',
-        '100': '#e9e9e9',
-        '200': '#dcdcdd',
-        '300': '#cfcfd0',
-        '400': '#c2c2c4',
-        '500': '#b5b5b7',
-        '600': '#a8a8aa',
-        '700': '#9b9b9e',
-        '800': '#8e8e91',
-        '900': '#818185',
+        '50': '#ffffff',
+        '100': '#ffffff',
+        '200': '#ffffff',
+        '300': '#ffffff',
+        '400': '#ffffff',
+        '500': '#FBF5F3',
+        '600': '#f5e5e0',
+        '700': '#eed5cd',
+        '800': '#e8c5ba',
+        '900': '#e1b5a6',
         'A100': '#ffffff',
         'A200': '#ffffff',
         'A400': '#ffffff',
-        'A700': '#757578'
+        'A700': '#dba593'
     };
     $mdThemingProvider
         .definePalette('customBackground',
@@ -87,4 +87,4 @@
        .accentPalette('customAccent')
        .warnPalette('customWarn')
        .backgroundPalette('customBackground')
-});
+       });

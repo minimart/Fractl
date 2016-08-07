@@ -2,14 +2,14 @@
 <div flex>
 
 
-<h3> Today's date is {{date | amDateFormat:'dddd, MMMM Do YYYY'}}. Are you ready to make a new diary entry? </h3>
+<h3> Today's date is {{entryObject.date | amDateFormat:'dddd, MMMM Do YYYY'}}. Are you ready to make a new diary entry? </h3>
 </div>
 <div flex>
 
 <div flex="66">
 
 
-<a href="/newEntry/any-urges"><md-button class="md-raised md-primary md-hue-3" ng-click="submitItem()"> Yes </md-button></a>
+<a href="/newEntry/any-urges"><md-button class="md-raised md-primary md-hue-3" ng-click="submitItem()" value="{{entryObject.date | amDateFormat:'dddd, MMMM Do YYYY'}}"> Yes </md-button></a>
 </div>
 <div flex="33">
 
