@@ -28,6 +28,10 @@ angular.module('fractlIndex').config(function($routeProvider, $locationProvider)
       templateUrl: 'views/entry_views/journaling.html',
       controller: 'journalingController'
     })
+    .when('/newEntry/review-and-submit', {
+      templateUrl: 'views/entry_views/review-and-submit.html',
+      controller: 'reviewController'
+    })
     .when('/pastentries', {
       templateUrl: 'views/pastentries.html',
       controller: 'pastEntriesController'

@@ -1,6 +1,6 @@
 <div layout="column" layout-wrap>
   <h3> Did you use any DBT Skills today?</h3>
-  <md-radio-group ng-model="input.dbtSkills.trueFalse">
+  <md-radio-group ng-model="entryObject.dbtSkills">
       <md-radio-button value="Yes" class="md-primary" ng-click="yesSkills = !yesSkills">Yes</md-radio-button>
       <md-radio-button value="No">No</md-radio-button>
   </md-radio-group>
@@ -8,7 +8,7 @@
     <h3> Great! Which skill(s) did you use? </h3>
     <md-input-container>
       <label>Skills</label>
-      <md-select ng-model="entryObject.dbtSkills" multiple>
+      <md-select ng-model="entryObject.skillsUsed" multiple>
       <md-optgroup label="dbtSkills">
       <md-option  ng-repeat="skill in dbtSkillsList" ng-true-value="'{{skill}}'" ng-false-value="'0'">{{skill}}</md-option>
       </md-optgroup>

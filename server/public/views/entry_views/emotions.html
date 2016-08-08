@@ -1,7 +1,7 @@
 <div flex>
   <h2> How were your emotion levels today?</h2>
   <h3> First, select an emotion. Then select how intense that emotion was, from 0 to 10 where 10 is the most intense.</h3>
-  <div layout="row" index="{{index}}" ng-repeat="item in itemList track by $index|limitTo:6">
+  <div layout="row" ng-repeat="item in itemList track by $index | limitTo:5">
     <md-input-container flex="33">
       <label>Emotion</label>
       <md-select ng-model="item.emotionObject.emotion">
@@ -14,7 +14,7 @@
       <md-select ng-model="item.emotionObject.intensity">
         <md-option ng-repeat="intensity in intensityList track by $index" ng-value="intensity">{{intensity}}</md-option>
       </md-select>
-      <md-button class="md-raised md-primary md-hue-4" ng-click="emotionSubmit()">Submit Emotion</md-button>
+      <md-button class="md-raised md-primary md-hue-4" ng-click="emotionSubmit(item)">Submit Emotion</md-button>
     </md-input-container>
 
   </div>
@@ -25,7 +25,7 @@
 
 
           <a href="/newEntry/drugs">
-              <md-button class="md-raised md-primary md-hue-3"> Next </md-button>
+              <md-button class="md-raised md-primary md-hue-3" ng-click="allEmotionSubmit()"> Next </md-button>
           </a>
       </div>
       <div flex="33">
