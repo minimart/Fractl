@@ -2,7 +2,7 @@ angular.module('fractlIndex').controller('emotionsController', function($scope, 
   $scope.entryObject = submitService.entryObject;
 
   $scope.intensityList = [0,1,2,3,4,5,6,7,8,9,10];
-  $scope.emotionList = ["anger", "fear", "pain", "shame", "joy", "sadness"];
+  $scope.emotionList = ["Anger", "Fear", "Pain", "Shame", "Joy", "Sadness"];
   $scope.emotionObject = {};
   $scope.itemList = [{}];
 

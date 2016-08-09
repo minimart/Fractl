@@ -1,42 +1,58 @@
 <div layout="rows">
-  <h3> Are you ready to submit today's diary entry?</h3>
-  <h3> Here is your current entry:</h3>
-  <p>
-    Today's Date: {{entryObject.date}}
-    Did you have any urges today?  {{entryObject.urges}}
-    If so, what were those urges:
-      {{entryObject.whatUrges.whatUrges1}}
-      {{entryObject.whatUrges.whatUrges2}}
-      {{entryObject.whatUrges.whatUrges3}}
-    Here are your emotion levels for today:
-    {{entryObject.emotion1.emotion}}
-    {{entryObject.emotion1.intensity}}
-
-    {{entryObject.emotion2.emotion}}
-    {{entryObject.emotion2.intensity}}
-
-    {{entryObject.emotion3.emotion}}
-    {{entryObject.emotion3.intensity}}
-
-    {{entryObject.emotion4.emotion}}
-    {{entryObject.emotion4.intensity}}
-
-    {{entryObject.emotion5.emotion}}
-    {{entryObject.emotion5.intensity}}
-
-    {{entryObject.emotion6.emotion}}
-    {{entryObject.emotion6.intensity}}
-
-    Here are the prescription and/or over-the-counter drugs that you took today:
+    <h3> Are you ready to submit today's diary entry?</h3>
+    <br />
+    <div>
 
 
-    Did you use any DBT skills today: {{entryObject.dbtSkills}}
-    If so, what skills did you use:
-    {{entryObject.skillsUsed}}
+        <h3> Here is your current entry:</h3>
+        <p>
+            Today's Date: {{entryObject.date | amDateFormat:'dddd, MMMM Do YYYY'}}
+            <br /> Did you have any urges today?
+            <br /> {{entryObject.urges}} If so, what were those urges:
+            <p ng-repeat="urge in entryObject.whatUrges">
+              {{urge}}
+            </p>
+            <p>
+            <br /> Here are your emotion levels for today:
+            <br /> {{entryObject.emotion1.emotionObject.emotion}}
+            <br /> {{entryObject.emotion1.emotionObject.intensity}}
+            <br /> {{entryObject.emotion2.emotionObject.emotion}}
+            <br /> {{entryObject.emotion2.emotionObject.intensity}}
+            <br /> {{entryObject.emotion3.emotionObject.emotion}}
+            <br /> {{entryObject.emotion3.emotionObject.intensity}}
+            <br /> {{entryObject.emotion4.emotionObject.emotion}}
+            <br /> {{entryObject.emotion4.emotionObject.intensity}}
+            <br /> {{entryObject.emotion5.emotionObject.emotion}}
+            <br /> {{entryObject.emotion5.emotionObject.intensity}}
+            <br /> {{entryObject.emotion6.emotionObject.emotion}}
+            <br /> {{entryObject.emotion6.emotionObject.intensity}}
+            <br /> Here are the prescription and/or over-the-counter drugs that you took today:
+            <p ng-repeat="drug in drugs">
+              {{drug}}
+            </p>
+            <p>
+            <br /> Did you use any DBT skills today: {{entryObject.dbtSkills}}
+            <br /> If so, what skills did you use:
+            <p ng-repeat="skill in entryObject.skillsUsed">
+            <br /> {{skill}}
+          </p>
+          <p>
+            <br /> Here is your journal entry for today:
+            <br /> {{entryObject.journaling}}
+            <br />
+        </p>
+    </div>
+    <div flex>
+        <div flex="66">
+            <a href="/home">
+                <md-button class="md-raised md-primary md-hue-3" ng-click="finalSubmit()"> Ready to submit! </md-button>
+            </a>
+        </div>
+        <div flex="33">
+            <a href="/newEntry/journaling">
+                <md-button class="md-raised md-primary md-hue-3">I need to change something!</md-button>
+            </a>
+        </div>
+    </div>
 
-    Here is your journal entry for today:
-    {{entryObject.journaling}}
-
-
-  </p>
 </div>
