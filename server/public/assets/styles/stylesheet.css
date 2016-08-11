@@ -12,3 +12,10 @@
 textarea {
   width: 600px;
 }
+md-datepicker.md-default-theme {
+  background: magenta;
+}
+.datepicker {
+  background: black;
+  color: white;
+}

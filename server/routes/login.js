@@ -4,14 +4,23 @@ var passport = require('passport');
 var path = require('path');
 
 router.get('/', function(request, response, next){
-  response.json(request.isAuthenticated());
+  response.json(request.user);
   response.sendFile(path.resolve(__dirname, '../views/login.html'));
+});
+
+router.get('/success', function(request, response, next){
+  response.sendStatus(200);
+});
+
+router.get('/failure', function(request, response, next){
+  response.sendStatus(401);
 });
 
 router.post('/',
   passport.authenticate('local', {
-    successRedirect:'/views/home.html', //THIS TO HOME
-    failureRedirect:'/views/login.html' // MAYBE A WARNING PAGE?
+    successRedirect:'/',
+    failureRedirect:'/failure',
+    failureFlash: "Invalid username or password, try again!"
   })
 );
 

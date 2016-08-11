@@ -1,5 +1,5 @@
 var submitService = angular.module('fractlIndex')
-.factory('submitService', function () {
+.factory('submitService', function ($http) {
 
     var entryObject = {
       date: "",
@@ -23,7 +23,10 @@ var submitService = angular.module('fractlIndex')
     };
 
     var finalSubmit = function() {
-      $http.post('/submit-diary-entry').then(handleSuccess, handleFailure);
+      console.log(entryObject);
+      $http.post('/submit-diary-entry', {
+        entryObject: entryObject
+      }).then(handleSuccess, handleFailure);
     };
 
     var handleSuccess = function(response) {
@@ -34,12 +37,13 @@ var submitService = angular.module('fractlIndex')
     };
 
 
+
 // name on the left is what we call, right is what it is
 // no parens to call functions
     return {
       entryObject: entryObject,
       submitItem: submitItem,
-      finalSubmit: finalSubmit
+      finalSubmit: finalSubmit,
     };
 
 });
