@@ -1,9 +1,9 @@
 angular.module('fractlIndex').config(function($routeProvider, $locationProvider){
   $routeProvider
-    .when('/home', {
-      templateUrl:'views/home.html',
-      controller: 'homeController',
-      access: {restricted: false}
+    .when('/successSubmit', {
+      templateUrl:'views/successSubmit.html',
+      controller: 'successSubmitController',
+      access: {restricted: true}
     })
     .when('/newEntry', {
       templateUrl:'views/entry_views/newentry.html',

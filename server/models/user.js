@@ -2,12 +2,26 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt');
 
-// var passportLocalMongoose = require('passport-local-mongoose');
+var Entry = new Schema ({
+  date: Date,
+  urges: String,
+  whatUrges: {whatUrges1:String, whatUrges2:String, whatUrges3:String},
+  emotion1: {emotionObject:{emotion:String, intensity: Number}},
+  emotion2: {emotionObject:{emotion:String, intensity: Number}},
+  emotion3: {emotionObject:{emotion:String, intensity: Number}},
+  emotion4: {emotionObject:{emotion:String, intensity: Number}},
+  emotion5: {emotionObject:{emotion:String, intensity: Number}},
+  emotion6: {emotionObject:{emotion:String, intensity: Number}},
+  drugs:[ {drugList:[{drug: String, amount: String}]}, {drugList:[{drug: String, amount: String}]}, {drugList:[{drug: String, amount: String}]}, {drugList:[{drug: String, amount: String}]}],
+  dbtSkills: String,
+  skillsUsed: [String],
+  journaling: String
+});
 
 var User = new Schema({
     username: {type: String, required: true, index: {unique: true} },
     password: {type: String, required: true},
-    entries: [{}]
+    entries: [Entry]
 });
 
 User.pre('save', function(next){

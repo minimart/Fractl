@@ -8,10 +8,6 @@ var index = require('./server/routes/index');
 var login = require('./server/routes/login');
 var register = require('./server/routes/register');
 var home = require('./server/routes/home');
-// var newEntry = require('./server/routes/newEntry');
-// var pastEntries = require('./server/routes/pastEntries');
-// var charts = require('./server/routes/charts');
-// var emergency = require('./server/routes/emergency');
 var submitDiaryEntry = require('./server/routes/submitDiaryEntry');
 var retrieveDiaryEntry = require('./server/routes/retrieveDiaryEntries');
 var mongoURI = "mongodb://localhost:27017/fractl";
@@ -51,11 +47,7 @@ app.use('/login', login);
 app.use('/register', register);
 app.use('/submit-diary-entry', submitDiaryEntry);
 app.use('/retrieve-diary-entry', retrieveDiaryEntry);
-// app.use('/home', home);
-// app.use('/newEntry', newEntry);
-// app.use('/pastEntries', pastEntries);
-// app.use('/charts', charts);
-// app.use('/emergency', emergency);
+
 
 
 passport.serializeUser(function(user, done){

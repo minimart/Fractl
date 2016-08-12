@@ -2,8 +2,8 @@
   <md-content>
   <md-datepicker class="md-primary" ng-model="myDate" md-placeholder="Select a date" id="datepicker"></md-datepicker>
   </md-content>
-  <md-button class="md-raised md-primary md-hue-3" ng-click="getEntries()"> Retrieve Entries </md-button>
-  <div ng-repeat="entry in entries track by $index">
-    {{entry}}
+  <md-button class="md-raised md-primary md-hue-3" ng-click="getEntries()"> Retrieve Entry </md-button>
+  <div>
+    {{entryList}}
   </div>
 </div>

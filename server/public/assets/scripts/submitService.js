@@ -24,9 +24,7 @@ var submitService = angular.module('fractlIndex')
 
     var finalSubmit = function() {
       console.log(entryObject);
-      $http.post('/submit-diary-entry', {
-        entryObject: entryObject
-      }).then(handleSuccess, handleFailure);
+      $http.post('/submit-diary-entry', entryObject).then(handleSuccess, handleFailure);
     };
 
     var handleSuccess = function(response) {

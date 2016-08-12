@@ -6,7 +6,7 @@ var mongoose = require('mongoose')
 var User = require('../models/user.js')
 
 
-router.get('/', function(request, response, date){
+router.get('/', function(request, response){
   User.find({}, function(err, entries){
     if(err){
       console.log('Failed to fetch entries', err);
@@ -19,3 +19,11 @@ router.get('/', function(request, response, date){
 });
 
 module.exports = router;
+
+
+
+// to find by date:
+// ({'username': 'Megan', "entries.date":
+  //      {$lt: new Date(request.date),
+  //     }
+  //  }, {'entries.$': 1
