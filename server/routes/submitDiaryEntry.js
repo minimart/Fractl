@@ -10,8 +10,7 @@ router.post('/', function(request, response){
   // console.log(request.user);
 
 
-  User.findById(request.user._id, function(err, user){
-    
+  User.findById(request.user._id, function(err, user){    
     user.entries.push(request.body);
     user.save(function(err){
       if(err){

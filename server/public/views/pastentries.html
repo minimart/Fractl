@@ -4,6 +4,27 @@
   </md-content>
   <md-button class="md-raised md-primary md-hue-3" ng-click="getEntries()"> Retrieve Entry </md-button>
   <div>
-    {{entryList}}
+    <h3>Date:</h3>{{entryList[0].date | amDateFormat:'dddd, MMMM Do YYYY'}}
+    <h3>Urges:</h3> <p ng-repeat="urge in entryList[0].whatUrges">
+      {{urge}}
+    <h3>Emotion Levels:</h3>
+    {{entryList[0].emotion1.emotionObject.emotion}}
+    {{entryList[0].emotion1.emotionObject.intensity}}
+    {{entryList[0].emotion2.emotionObject.emotion}}
+    {{entryList[0].emotion2.emotionObject.intensity}}
+    {{entryList[0].emotion3.emotionObject.emotion}}
+    {{entryList[0].emotion3.emotionObject.intensity}}
+    {{entryList[0].emotion4.emotionObject.emotion}}
+    {{entryList[0].emotion4.emotionObject.intensity}}
+    {{entryList[0].emotion5.emotionObject.emotion}}
+    {{entryList[0].emotion5.emotionObject.intensity}}
+    {{entryList[0].emotion6.emotionObject.emotion}}
+    {{entryList[0].emotion6.emotionObject.intensity}}
+    <h3>Drugs Taken:</h3>
+    <p ng-repeat="drug in drugs track by $index">
+      {{drugs}}
+    </p>
+    <h3>DBT Skills Used:</h3>   <p ng-repeat="skill in entryObject[0].skillsUsed">{{skill}}</p>
+    <h3>Journal Entry:</h3> {{entryList[0].journaling}}
   </div>
 </div>
