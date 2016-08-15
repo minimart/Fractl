@@ -13,7 +13,7 @@ function handleSuccess(response){
   console.log(response);
   var user = response.config.data.username;
   console.log(user);
-  $location.path('/home.html');
+  $location.path('/home');
 
 };
 function handleFailure(response){

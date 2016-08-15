@@ -1,30 +1,49 @@
 <div>
   <md-content>
   <md-datepicker class="md-primary" ng-model="myDate" md-placeholder="Select a date" id="datepicker"></md-datepicker>
-  </md-content>
   <md-button class="md-raised md-primary md-hue-3" ng-click="getEntries()"> Retrieve Entry </md-button>
+  </md-content>
   <div>
-    <h3>Date:</h3>{{entryList[0].date | amDateFormat:'dddd, MMMM Do YYYY'}}
+    <md-content class="md-padding" layout-xs="column" layout="row">
+      <div flex-xs flex-gt-xs="50" layout="column">
+    <md-card class="md-whiteframe-8dp" ng-show="buttonClicked">
+      <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Entry</span>
+            <span class="md-subhead">{{entryList[0].date | amDateFormat:'dddd, MMMM Do YYYY'}}</span>
+            <!-- <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out"> -->
+
+          </md-card-title-text>
+      <md-card-content layout="column">
     <h3>Urges:</h3> <p ng-repeat="urge in entryList[0].whatUrges">
       {{urge}}
     <h3>Emotion Levels:</h3>
-    {{entryList[0].emotion1.emotionObject.emotion}}
+    {{entryList[0].emotion1.emotionObject.emotion}}:
     {{entryList[0].emotion1.emotionObject.intensity}}
-    {{entryList[0].emotion2.emotionObject.emotion}}
+    <br />
+    {{entryList[0].emotion2.emotionObject.emotion}}:
     {{entryList[0].emotion2.emotionObject.intensity}}
-    {{entryList[0].emotion3.emotionObject.emotion}}
+    <br />
+    {{entryList[0].emotion3.emotionObject.emotion}}:
     {{entryList[0].emotion3.emotionObject.intensity}}
-    {{entryList[0].emotion4.emotionObject.emotion}}
+    <br />
+    {{entryList[0].emotion4.emotionObject.emotion}}:
     {{entryList[0].emotion4.emotionObject.intensity}}
-    {{entryList[0].emotion5.emotionObject.emotion}}
+    <br />
+    {{entryList[0].emotion5.emotionObject.emotion}}:
     {{entryList[0].emotion5.emotionObject.intensity}}
+    <br />
     {{entryList[0].emotion6.emotionObject.emotion}}
     {{entryList[0].emotion6.emotionObject.intensity}}
     <h3>Drugs Taken:</h3>
     <p ng-repeat="drug in drugs track by $index">
-      {{drugs}}
+      {{drug}}
     </p>
-    <h3>DBT Skills Used:</h3>   <p ng-repeat="skill in entryObject[0].skillsUsed">{{skill}}</p>
+    <h3>DBT Skills Used:</h3>   <p ng-repeat="skill in entryList[0].skillsUsed">{{skill}}</p>
     <h3>Journal Entry:</h3> {{entryList[0].journaling}}
   </div>
+  </md-card-content>
+  </md-card>
+  </div>
+  </md-content>
 </div>

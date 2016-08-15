@@ -3,10 +3,8 @@ angular.module('fractlIndex').controller('pastEntriesController', function($scop
     $scope.myDate = new Date();
     $scope.entryList = entryList;
     var entryList = [];
-
-    var drugs = [];
-    $scope.drugs = drugs;
-
+    $scope.buttonClicked = false;
+    $scope.imagePath = "/assets/images/journal.jpg"
 
     $scope.getEntries = function() {
         // console.log($scope.myDate);
@@ -32,18 +30,27 @@ angular.module('fractlIndex').controller('pastEntriesController', function($scop
                 if (entryList.length === 0){
                   $scope.entryList = "Sorry, no entries found for that date. Please select another.";
                 }
-            }
-            angular.forEach(entryList[0].drugs[0].drugList[0], function(value, key){
-              var drugList = value.drugList;
+            };
+            var drugs = [];
+
+            angular.forEach($scope.entryList[0].drugs, function(value, key){
+              var drugList = value.drugList[0];
               console.log('Iterating', drugList);
               if(drugList == null){
-                drugs.push("You did not take any medications that day.");
+              drugs.push("You did not take any medications that day.");
               } else{
               drugs.push(drugList.drugName, drugList.drugAmount);
               }
+              console.log(drugs);
             });
+            // if (drugs[0] === "You did not take any medications that day."){
+            //   var drugs = "You did not take any medications that day.";
+            // };
+
+            console.log($scope.entryList);
+            $scope.drugs = drugs;
+            $scope.buttonClicked = true;
         });
-        console.log($scope.entryList);
 
     };
 

@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Fractl</title>
+    <title>Dialectical</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="../vendor/angular.min.js" type="text/javascript"></script>
     <script src="../vendor/angular-animate.min.js" type="text/javascript"></script>
     <script src="../vendor/angular-aria.min.js" type="text/javascript"></script>
@@ -11,6 +13,11 @@
     <script src="../vendor/angular-route.min.js" type="text/javascript"></script>
     <script src="../vendor/moment.min.js" type="text/javascript"></script>
     <script src="../vendor/angular-moment.min.js" type="text/javascript"></script>
+    <script src="../vendor/angular-messages.min.js" type="text/javascript"></script>
+    <script src="../vendor/angular-chartjs.min.js" type="text/javascript"></script>
+    <script src="../vendor/nv.d3.min.js" type="text/javascript"></script>
+    <script src="../vendor/highcharts-ng.min.js" type="text/javascript"></script>
+    <script src="../vendor/highcharts.js" type="text/javascript"></script>
     <script src="../assets/scripts/mainController.js" type="text/javascript"></script>
     <script src="../assets/scripts/fractlindex.module.js" type="text/javascript"></script>
     <script src="../assets/scripts/emergencyController.js" type="text/javascript"></script>
@@ -27,22 +34,20 @@
     <script src="../assets/scripts/loginController.js" type="text/javascript"></script>
     <script src="../assets/scripts/registerController.js" type="text/javascript"></script>
     <script src="../assets/scripts/successSubmitController.js" type="text/javascript"></script>
+    <script src="../assets/scripts/indexController.js" type="text/javascript"></script>
     <script src="../assets/scripts/submitService.js" type="text/javascript"></script>
-    <script src="../vendor/angular-messages.min.js" type="text/javascript"></script>
-    <script src="../vendor/angular-chartjs.min.js" type="text/javascript"></script>
-    <script src="../vendor/chart.min.js" type="text/javascript"></script>
+
+    <link href="../vendor/nv.d3.min.css" rel="stylesheet" />
     <link href="../vendor/angular-material.min.css" rel="stylesheet" />
     <link href="../vendor/angular-material.layout-attributes.min.css" rel="stylesheet" />
     <link href="../vendor/angular-material.layouts.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="../assets/styles/stylesheet.css" charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet" />
-    <base href="/" />
-</head>
+    <base href="/home" />
+    <md-toolbar layout="row" class="md-background md-hue-4 md-whiteframe-10dp" md-scroll-shrink="false" style="min-height: 105px;">
+        <img src="../assets/images/arrow.png" height="100px" style="padding: 5px;" />
 
-<body layout="column">
-    <md-toolbar layout="row" class="md-background md-hue-4 md-whiteframe-10dp">
-        <!-- <img src="../assets/images/logo-with-text2.png" height="100px" layout-margin/> -->
-        <h1>Dialectical</h1>
+        <h1 style="padding:8px;">Dialectical</h1>
         <br />
         <br />
         <br />
@@ -54,6 +59,9 @@
             <md-button class="md-raised md-accent">Register</md-button>
         </a>
     </md-toolbar>
+</head>
+
+<body layout="column">
     <div flex layout="row">
         <md-sidenav md-is-locked-open="true" class="md-whiteframe-10dp" flex-gt-sm="15">
             <a href="/home">
@@ -74,7 +82,7 @@
 
         </md-sidenav>
         <md-content flex id="content" class="layout-padding-lg" ng-view>
-            <!-- Insert homepage stuff here! :D -->
+
         </md-content>
     </div>
 </body>

@@ -12,7 +12,7 @@ var Entry = new Schema ({
   emotion4: {emotionObject:{emotion:String, intensity: Number}},
   emotion5: {emotionObject:{emotion:String, intensity: Number}},
   emotion6: {emotionObject:{emotion:String, intensity: Number}},
-  drugs:[ {drugList:[{drug: String, amount: String}]}, {drugList:[{drug: String, amount: String}]}, {drugList:[{drug: String, amount: String}]}, {drugList:[{drug: String, amount: String}]}],
+  drugs:[ {drugList:[{drugAmount: String, drugName: String}]}, {drugList:[{drugAmount: String, drugName: String}]}, {drugList:[{drugAmount: String, drugName: String}]}, {drugList:[{drugAmount: String, drugName: String}]}],
   dbtSkills: String,
   skillsUsed: [String],
   journaling: String

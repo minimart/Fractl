@@ -1,19 +1,30 @@
-<p>
-  Sorry, that username and/or password was incorrect! Please try again!
-</p>
+
+<md-toolbar class="md-accent">
+  <div class="md-toolbar-tools position">
+    Please login.
+      <span flex></span> <a href="/register">
+        <md-button class="md-raised md-primary">Register</md-button>
+    </a>
+  </div>
+</md-toolbar>
+<md-content layout="column">
+<md-card>
+  <md-card-title-text layout-align="center center">
+    <span class="md-headline">Sorry, that username or password was incorrect, please try again.
+    </span>
+  </md-card-title-text>
+  <md-card-content>
 <md-input-container>
     <label>Username</label>
     <input type="text" name="username" id="username" ng-model="username" />
 </md-input-container>
+<br />
 <md-input-container>
     <label>Password</label>
 
     <input type="password" name="password" id="password" ng-model="password"/>
     <md-button class="md-raised md-primary" ng-click="login()">Login</md-button>
 </md-input-container>
-
-<div flex>
-    <a href="/register">
-        <md-button class="md-raised md-primary">Register</md-button>
-    </a>
-</div>
+</md-card-content>
+</md-card>
+</md-content>

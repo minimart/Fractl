@@ -1,5 +1,15 @@
 angular.module('fractlIndex').config(function($routeProvider, $locationProvider){
   $routeProvider
+    .when('/', {
+      templateUrl: 'views/index.html',
+      controller: 'indexController',
+      access: {restricted: false}
+    })
+    .when('/home', {
+      templateUrl: 'views/index.html',
+      controller: 'indexController',
+      access: {restricted: false}
+    })
     .when('/successSubmit', {
       templateUrl:'views/successSubmit.html',
       controller: 'successSubmitController',
@@ -71,8 +81,8 @@ angular.module('fractlIndex').config(function($routeProvider, $locationProvider)
       access: {restricted: false}
     })
     .when('/success', {
-      templateUrl: 'views/home.html',
-      controller: 'homeController',
+      templateUrl: 'views/index.html',
+      controller: 'indexController',
       access: {restricted: true}
     })
 $locationProvider.html5Mode(true);

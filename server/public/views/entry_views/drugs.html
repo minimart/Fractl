@@ -1,6 +1,8 @@
-<div flex="50" layout="column" layout-wrap>
+<div flex="50" layout="column">
   <h3>What prescription or over-the-counter medications did you take today?</h3>
-  <div flex ng-repeat="input in drugList">
+</div>
+
+  <div ng-repeat="input in drugList" layout="column" layout-flex>
 
     <md-input-container class="md-block">
            <label>Drug Name</label>
@@ -10,8 +12,7 @@
       <label>Amount</label>
       <input ng-model="input.drugList.drugAmount" />
   </md-input-container>
-  <md-button class="md-raised md-primary md-hue-4" ng-click="drugSubmit()">Submit Drug</md-button>
-</div>
+  <md-button class="md-raised md-primary md-hue-4" ng-click="drugSubmit()">Next Drug</md-button>
 </div>
 <div flex>
     <div flex="66">
