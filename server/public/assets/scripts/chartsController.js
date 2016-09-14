@@ -1,5 +1,6 @@
 angular.module('fractlIndex').controller('chartsController', function($scope) {
     Highcharts.chart('container', {
+      // hardcoded for ease of use during demos
         title: {
             text: 'August Sadness'
         },
